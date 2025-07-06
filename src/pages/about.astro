@@ -1,11 +1,20 @@
-<body>
-    <h1>About Me</h1>
-    <h2>Jirawat Sukharom:</h2>
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-
-    <p>Welcome to my astro page! This is a test paragraph.</p>
-
-</body>
+const pageTitle = 'About me';
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header pageTitle={pageTitle}/>
+        <Footer />
+	</body>
+</html>
